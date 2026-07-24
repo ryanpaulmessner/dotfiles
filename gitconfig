@@ -4,7 +4,7 @@
 	defaultBranch = main
 
 [push]
-  default = tracking
+	default = simple
 	autoSetupRemote = true
   
 [color]
@@ -141,5 +141,7 @@
 	helper = 
 	helper = !gh auth git-credential
 [user]
-	email = rpmessner@gmail.com
+	email = rmessner@infinityhomeservices.com
 	name = Ryan Messner
+[beads]
+	role = maintainer
