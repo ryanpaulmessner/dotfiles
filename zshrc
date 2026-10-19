@@ -14,7 +14,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
@@ -31,7 +30,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 for f in ${XDG_CONFIG_HOME}/zsh/*; do
   source $f
 done
-
 
 ITERM2_INTEGRATION_SCRIPT="${HOME}/.iterm2_shell_integration.zsh"
 test -e "$ITERM2_INTEGRATION_SCRIPT" && source "$ITERM2_INTEGRATION_SCRIPT"
@@ -111,7 +109,6 @@ esac
 
 # Rust/Cargo binaries are added by config/zsh/rust.zsh or via cargo itself
 
-
 # Prompt Configuration
 # Choose ONE of the following options:
 
@@ -125,3 +122,11 @@ fi
 
 # Note: Haskell/GHCup PATH configuration is handled in config/zsh/haskell.zsh
 # The ~/.ghcup/env file is sourced there to avoid duplicate PATH entries
+export CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1
+
+# airmux cockpit must live on the gc tmux server (socket "ihs") — see ~/dev/work/airmux.yml
+export AIRMUX_COMMAND="tmux -L ihs"
+
+# pi: hide the tmux extended-keys startup warning (extended-keys breaks tmux scrollback here).
+# The shim only fails pi's `tmux show -gv extended-keys` probe; other tmux calls pass through.
+alias pi='PATH="$HOME/.pi/agent/shims:$PATH" pi'
