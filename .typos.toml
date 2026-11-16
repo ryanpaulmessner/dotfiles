@@ -1,5 +1,5 @@
 [default]
-extend-ignore-words-re = ["(iterm.*|ITERM.*)", "[nN]oice.*"]
+extend-ignore-words-re = ["(iterm.*|ITERM.*)", "[nN]oice.*", "ihs"]
 extend-ignore-re = [
   # ignore line with: # spellchecker:disable-line
   "(?Rm)^.*(#|//|--)\\s*spellchecker:disable-line$",
