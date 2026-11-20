@@ -171,8 +171,13 @@ tasks:
       - for:
           var: FILES
           as: FILE
+        # Skip files missing from the repo: `ln -s -f ""` would delete a real ~/.<file> (lost ~/.p10k.zsh once).
         cmd: |
-          ln -s -f "$(realpath ./{{.FILE}})" ~/.{{.FILE}}
+          if [ -e ./{{.FILE}} ]; then
+            ln -s -f "$(realpath ./{{.FILE}})" ~/.{{.FILE}}
+          else
+            echo "skip {{.FILE}}: not in the repo, ~/.{{.FILE}} left as is"
+          fi
 
       - cmd: |
           for folder in ./config/*; do
