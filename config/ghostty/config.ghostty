@@ -1,0 +1,50 @@
+# Ghostty: main terminal on macOS. tmux does panes/tabs; Ghostty only draws.
+# Machine-only lines go in ~/.config/ghostty/config.local (not in the repo).
+
+# Look: Tokyo Night with the brighter colours from config/wezterm/wezterm.lua
+theme = TokyoNight Night
+background = #14151c
+foreground = #d0daf5
+palette = 0=#2a2f44
+palette = 1=#ff9db4
+palette = 2=#c3f991
+palette = 3=#ffd580
+palette = 4=#97c2ff
+palette = 5=#d7bdff
+palette = 6=#a3e5ff
+palette = 7=#f5f5f5
+palette = 8=#545c7e
+palette = 9=#ffb3c9
+palette = 10=#dcffb0
+palette = 11=#ffe9a3
+palette = 12=#b8d7ff
+palette = 13=#ebd5ff
+palette = 14=#c9f3ff
+palette = 15=#ffffff
+
+font-family = FiraCode Nerd Font
+font-family = JetBrains Mono
+font-size = 11
+font-feature = calt
+font-feature = liga
+
+window-padding-x = 4
+window-padding-y = 4
+macos-titlebar-style = hidden
+macos-non-native-fullscreen = true
+cursor-style = bar
+cursor-style-blink = true
+
+# Keys: left Option is Alt/Meta, right Option types special characters
+macos-option-as-alt = left
+keybind = shift+insert=paste_from_clipboard
+keybind = super+shift+c=copy_to_clipboard
+keybind = super+shift+v=paste_from_clipboard
+
+copy-on-select = clipboard
+confirm-close-surface = false
+
+# zsh-vi-mode sets the cursor shape; do not let shell integration fight it
+shell-integration-features = no-cursor
+
+config-file = ?config.local

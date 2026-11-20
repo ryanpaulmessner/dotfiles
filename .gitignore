@@ -27,6 +27,9 @@ scratch/
 # ignore tool state written through ~/.config/<tool> symlinks
 config/go/telemetry/
 
+# machine-only Ghostty lines (loaded by config-file = ?config.local)
+config/ghostty/config.local
+
 # ignore dadbod database queries and connections (local/sensitive)
 .db_queries/
 
