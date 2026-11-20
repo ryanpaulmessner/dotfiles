@@ -56,7 +56,6 @@
     "CHANGELOG.md",
     "config/hammerspoon/Spoons/*.spoon/**",
     "gitleaks-report.json",
-    "config/wezterm/wezterm.lua",
     "config/zsh/completions.zsh",
     "config/zsh/functions.zsh",
     "config/zsh/fzf-tab.zsh"

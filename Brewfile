@@ -3,8 +3,8 @@
 # Dual Panel File Browser
 cask 'marta'
 
-# Fast GPU rendered terminal emulator
-cask 'wezterm'
+# Fast GPU rendered terminal emulator (main terminal; config in config/ghostty)
+cask 'ghostty'
 
 # best screenshot tool on mac
 cask 'cleanshot'

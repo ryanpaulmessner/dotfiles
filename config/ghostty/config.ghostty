@@ -1,7 +1,7 @@
 # Ghostty: main terminal on macOS. tmux does panes/tabs; Ghostty only draws.
 # Machine-only lines go in ~/.config/ghostty/config.local (not in the repo).
 
-# Look: Tokyo Night with the brighter colours from config/wezterm/wezterm.lua
+# Look: Tokyo Night with the brighter colours carried over from the old WezTerm config
 theme = TokyoNight Night
 background = #14151c
 foreground = #d0daf5

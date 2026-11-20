@@ -83,10 +83,6 @@ includes:
   apt:
     taskfile: ./taskfiles/apt.yml
 
-  wezterm:
-    aliases: [wez]
-    taskfile: ./taskfiles/wezterm.yml
-
   zinit:
     taskfile: ./taskfiles/zinit.yml
 
