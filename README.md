@@ -31,7 +31,7 @@ Here are some details about my setup:
 
 - **OS**: Ubuntu (WSL2) / macOS
 - **Shell**: [zsh](https://www.zsh.org/) with [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode) for vim-like editing
-- **Terminal**: [WezTerm](https://wezfurlong.org/wezterm/)
+- **Terminal**: [Ghostty](https://ghostty.org/) (macOS; tmux does all panes and tabs)
 - **Term Prompt**: [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - **Terminal Multiplexer**: [Tmux](https://github.com/tmux/tmux)
 - **Shell History**: [zsh-histdb](https://github.com/larkery/zsh-histdb) — SQLite-based command history
@@ -42,7 +42,7 @@ Here are some details about my setup:
   - Built-in LSP with [Mason](https://github.com/williamboman/mason.nvim) for tool management
   - [blink.cmp](https://github.com/saghen/blink.cmp) — Ultra-fast completion with native Rust core
   - [tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter) — Advanced syntax highlighting
-  - [tokyonight](https://github.com/folke/tokyonight.nvim) — Color theme (consistent across WezTerm/tmux)
+  - [tokyonight](https://github.com/folke/tokyonight.nvim) — Color theme (consistent across Ghostty/tmux)
   - [snacks.nvim](https://github.com/folke/snacks.nvim) — Picker, dashboard, and UI framework
   - [oil.nvim](https://github.com/stevearc/oil.nvim) — File explorer as a buffer
   - [Claude Code](https://github.com/coder/claudecode.nvim) — AI coding assistant integration
@@ -64,17 +64,17 @@ Feel free to "steal" anything you want, and if you have a question please open a
 
 ## Unified Window/Pane Management
 
-A key philosophy of this setup is **unified keybindings** across Vim, tmux, and WezTerm. The same muscle memory works everywhere:
+A key philosophy of this setup is **unified keybindings** across Vim and tmux (Ghostty only draws the window; tmux owns panes and tabs). The same muscle memory works everywhere:
 
-| Operation       | Vim            | tmux           | WezTerm        | Purpose                    |
-|-----------------|----------------|----------------|----------------|----------------------------|
-| Navigate        | `Ctrl+W hjkl`  | `Ctrl+S hjkl`  | `Ctrl+Sp hjkl` | Move between panes         |
-| Swap/Move       | `Ctrl+W HJKL`  | `Ctrl+S HJKL`  | `Ctrl+Sp HJKL` | Rearrange layout           |
-| Resize          | `Ctrl+W Ctrl+hjkl` | `Ctrl+S Ctrl+hjkl` | `Ctrl+Sp Ctrl+hjkl` | Adjust dimensions |
-| Zoom            | `Ctrl+W z`     | `Ctrl+S z`     | `Ctrl+Sp z`    | Maximize/restore           |
-| Equalize        | `Ctrl+W =`     | `Ctrl+S =`     | —              | Equal sizes                |
-| Rotate          | `Ctrl+W r/R`   | `Ctrl+S R`     | `Ctrl+Sp R`    | Cycle positions            |
-| Last Active     | `Ctrl+W ;`     | `Ctrl+S ;`     | `Ctrl+Sp ;`    | Jump to previous pane      |
+| Operation       | Vim            | tmux           | Purpose                    |
+|-----------------|----------------|----------------|----------------------------|
+| Navigate        | `Ctrl+W hjkl`  | `Ctrl+S hjkl`  | Move between panes         |
+| Swap/Move       | `Ctrl+W HJKL`  | `Ctrl+S HJKL`  | Rearrange layout           |
+| Resize          | `Ctrl+W Ctrl+hjkl` | `Ctrl+S Ctrl+hjkl` | Adjust dimensions |
+| Zoom            | `Ctrl+W z`     | `Ctrl+S z`     | Maximize/restore           |
+| Equalize        | `Ctrl+W =`     | `Ctrl+S =`     | Equal sizes                |
+| Rotate          | `Ctrl+W r/R`   | `Ctrl+S R`     | Cycle positions            |
+| Last Active     | `Ctrl+W ;`     | `Ctrl+S ;`     | Jump to previous pane      |
 
 **Pattern**: More modifiers = more permanent changes
 - `hjkl` → navigate (temporary)

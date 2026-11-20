@@ -1,6 +1,6 @@
 # Ghostty Integration Plan (Parked)
 
-**Status:** Parked / not started — 2026-06-15
+**Status:** Replaced by [ghostty-review.md](./ghostty-review.md) (2026-11-20). Kept for history.
 **Goal:** Make Ghostty a first-class shell host *alongside* WezTerm (coexist, not replace), driven by the same TokyoNight + FiraCode look and the unified window/pane keybindings used across vim/tmux/WezTerm.
 
 ## Context

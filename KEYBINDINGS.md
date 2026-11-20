@@ -1,6 +1,6 @@
 # Keybindings Cheat Sheet
 
-Quick reference for all keybindings across Zsh, Neovim, tmux, and WezTerm.
+Quick reference for all keybindings across Zsh, Neovim, tmux, and Ghostty.
 
 ---
 
@@ -8,15 +8,15 @@ Quick reference for all keybindings across Zsh, Neovim, tmux, and WezTerm.
 
 Same muscle memory works across all tools:
 
-| Operation    | Vim              | tmux             | WezTerm          |
-|--------------|------------------|------------------|------------------|
-| Navigate     | `Ctrl+W hjkl`    | `Ctrl+S hjkl`    | `Ctrl+Sp hjkl`   |
-| Swap/Move    | `Ctrl+W HJKL`    | `Ctrl+S HJKL`    | `Ctrl+Sp HJKL`   |
-| Resize       | `Ctrl+W Ctrl+hjkl` | `Ctrl+S Ctrl+hjkl` | `Ctrl+Sp Ctrl+hjkl` |
-| Zoom         | `Ctrl+W z`       | `Ctrl+S z`       | `Ctrl+Sp z`      |
-| Equalize     | `Ctrl+W =`       | `Ctrl+S =`       | —                |
-| Rotate       | `Ctrl+W r/R`     | `Ctrl+S R`       | `Ctrl+Sp R`      |
-| Last Active  | `Ctrl+W ;`       | `Ctrl+S ;`       | `Ctrl+Sp ;`      |
+| Operation    | Vim              | tmux             |
+|--------------|------------------|------------------|
+| Navigate     | `Ctrl+W hjkl`    | `Ctrl+S hjkl`    |
+| Swap/Move    | `Ctrl+W HJKL`    | `Ctrl+S HJKL`    |
+| Resize       | `Ctrl+W Ctrl+hjkl` | `Ctrl+S Ctrl+hjkl` |
+| Zoom         | `Ctrl+W z`       | `Ctrl+S z`       |
+| Equalize     | `Ctrl+W =`       | `Ctrl+S =`       |
+| Rotate       | `Ctrl+W r/R`     | `Ctrl+S R`       |
+| Last Active  | `Ctrl+W ;`       | `Ctrl+S ;`       |
 
 **Pattern**: More modifiers = more permanent changes
 - `hjkl` → navigate (temporary)
@@ -115,63 +115,23 @@ Standard vim bindings: `hjkl`, `w/b/e`, `0/$`, `x`, `dd`, `dw`, `cw`, `ciw`, `u`
 
 ---
 
-## WezTerm
+## Ghostty
 
-**Leader**: `Ctrl+Space` (1 second timeout)
+Ghostty only draws the window; tmux does panes and tabs. Config: `config/ghostty/config.ghostty`
+(machine-only lines in `~/.config/ghostty/config.local`). Left Option is Alt/Meta; right Option types
+special characters. `Ctrl+Space` and `Alt+Enter` go through to programs.
 
-### Panes
+| Binding               | Action                  |
+|-----------------------|-------------------------|
+| `Cmd+C` / `Cmd+Shift+C` | Copy                  |
+| `Cmd+V` / `Cmd+Shift+V` / `Shift+Insert` | Paste |
+| `Shift+drag`          | Select in Ghostty (bypasses tmux mouse); copies to clipboard |
+| `Cmd+click`           | Open URL                |
+| `Cmd+ =/-/0`          | Font size +/-/reset     |
+| `Cmd+Enter`           | Toggle fullscreen       |
+| `Cmd+Shift+,`         | Reload config           |
 
-| Binding           | Action                  |
-|-------------------|-------------------------|
-| `Leader s`        | Split horizontal        |
-| `Leader v`        | Split vertical          |
-| `Leader hjkl`     | Navigate panes          |
-| `Leader HJKL`     | Swap pane (interactive) |
-| `Leader Ctrl+hjkl`| Resize pane             |
-| `Leader z`        | Zoom/unzoom pane        |
-| `Leader R`        | Rotate panes            |
-| `Leader ;`        | Pane select (interactive) |
-| `Leader x`        | Close pane (confirm)    |
-
-### Tabs
-
-| Binding           | Action                  |
-|-------------------|-------------------------|
-| `Leader c`        | New tab                 |
-| `Leader Tab`      | Last tab                |
-| `Leader n/p`      | Next/previous tab       |
-| `Leader 1-9`      | Go to tab N             |
-
-### Copy/Paste
-
-| Binding           | Action                  |
-|-------------------|-------------------------|
-| `Ctrl+Shift+C`    | Copy to clipboard       |
-| `Ctrl+Shift+V`    | Paste from clipboard    |
-| `Shift+Insert`    | Paste (alternative)     |
-| `Cmd/Ctrl+[`      | Enter copy mode         |
-
-### Copy Mode (vim-like)
-
-| Binding           | Action                  |
-|-------------------|-------------------------|
-| `hjkl`            | Navigate                |
-| `w/b`             | Word forward/backward   |
-| `0/$`             | Start/end of line       |
-| `g/G`             | Top/bottom of scrollback |
-| `v/V`             | Select cell/line        |
-| `y`               | Copy and close          |
-| `q/Escape`        | Exit copy mode          |
-
-### Other
-
-| Binding           | Action                  |
-|-------------------|-------------------------|
-| `Leader r`        | Reload config           |
-| `Cmd/Ctrl+ =/- /0`| Font size +/-/reset     |
-| `Ctrl+Shift+Space`| Quick select (URLs/paths) |
-| `Alt+Enter`       | Toggle fullscreen       |
-| `Cmd/Ctrl+click`  | Open URL                |
+Copy mode and quick select: use tmux (`Prefix [`, `Prefix F` thumbs, `Prefix TAB` extrakto).
 
 ---
 
@@ -365,7 +325,6 @@ Standard vim bindings: `hjkl`, `w/b/e`, `0/$`, `x`, `dd`, `dw`, `cw`, `ciw`, `u`
 ### Leader Keys
 - **Zsh**: None (vi-mode uses Escape/Ctrl+G)
 - **tmux**: `Ctrl+S` or `Ctrl+Z`
-- **WezTerm**: `Ctrl+Space`
 - **Neovim**: `Space` (LazyVim default)
 
 ### Mode Escape

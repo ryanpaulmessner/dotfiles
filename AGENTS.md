@@ -1,6 +1,6 @@
 # AGENTS.md — dotfiles
 
-Ryan's dotfiles (fork of dkarter/dotfiles): zsh, tmux, Neovim, WezTerm, git, driven by Task (`taskfiles/`) and asdf
+Ryan's dotfiles (fork of dkarter/dotfiles): zsh, tmux, Neovim, Ghostty, git, driven by Task (`taskfiles/`) and asdf
 (`.tool-versions`). Primary machine is Windows 11 + WSL2 Ubuntu; macOS is secondary. `CLAUDE.md` is a symlink to this
 file — edit `AGENTS.md`.
 

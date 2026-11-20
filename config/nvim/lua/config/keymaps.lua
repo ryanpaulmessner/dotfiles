@@ -160,7 +160,7 @@ nmap({
 nmap({ "<C-w>z", ":wincmd _<cr>:wincmd \\|<cr>", { desc = "Zoom window (maximize)" } })
 -- Note: Ctrl+W = already exists as vim default for equalizing windows
 
--- last active window (alias to Ctrl+W p for consistency with tmux/wezterm)
+-- last active window (alias to Ctrl+W p for consistency with tmux)
 nmap({ "<C-w>;", "<C-w>p", { desc = "Go to last active window" } })
 
 -- close all other windows with <leader>o

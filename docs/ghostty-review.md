@@ -4,6 +4,8 @@ Epic `dot-2dj`. Written 2026-11-20 by the ghostty coordinator. Phase 1 only: not
 config was changed. The proposed files were checked with `ghostty +validate-config` and a separate tmux
 server (`tmux -L ghostty-test`), and are shown here, not installed.
 
+**Outcome (2026-11-20):** Ryan chose "Build; remove WezTerm" (this config is macOS only, no WSL). Recommended keys kept.
+
 Status words: **pass** (works in Ghostty today or with the proposal), **gap** (needs a change or a
 decision), **not checked** (needs Ryan's eyes or a remote host; see the checklist at the end).
 
