@@ -41,6 +41,38 @@ keybind = shift+insert=paste_from_clipboard
 keybind = super+shift+c=copy_to_clipboard
 keybind = super+shift+v=paste_from_clipboard
 
+# Leader Ctrl+Space for Ghostty splits/tabs, same letters as tmux and nvim (no timeout).
+# Ctrl+Space twice sends Ctrl+Space (NUL) to the program, e.g. blink.cmp completion.
+keybind = ctrl+space>ctrl+space=text:\x00
+keybind = ctrl+space>h=goto_split:left
+keybind = ctrl+space>j=goto_split:down
+keybind = ctrl+space>k=goto_split:up
+keybind = ctrl+space>l=goto_split:right
+keybind = ctrl+space>ctrl+h=resize_split:left,40
+keybind = ctrl+space>ctrl+j=resize_split:down,40
+keybind = ctrl+space>ctrl+k=resize_split:up,40
+keybind = ctrl+space>ctrl+l=resize_split:right,40
+keybind = ctrl+space>s=new_split:down
+keybind = ctrl+space>v=new_split:right
+keybind = ctrl+space>shift+apostrophe=new_split:down
+keybind = ctrl+space>shift+five=new_split:right
+keybind = ctrl+space>z=toggle_split_zoom
+keybind = ctrl+space>equal=equalize_splits
+keybind = ctrl+space>x=close_surface
+keybind = ctrl+space>c=new_tab
+keybind = ctrl+space>tab=last_tab
+keybind = ctrl+space>n=next_tab
+keybind = ctrl+space>p=previous_tab
+keybind = ctrl+space>one=goto_tab:1
+keybind = ctrl+space>two=goto_tab:2
+keybind = ctrl+space>three=goto_tab:3
+keybind = ctrl+space>four=goto_tab:4
+keybind = ctrl+space>five=goto_tab:5
+keybind = ctrl+space>six=goto_tab:6
+keybind = ctrl+space>seven=goto_tab:7
+keybind = ctrl+space>eight=goto_tab:8
+keybind = ctrl+space>nine=goto_tab:9
+
 copy-on-select = clipboard
 confirm-close-surface = false
 

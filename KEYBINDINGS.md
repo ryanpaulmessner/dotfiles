@@ -119,7 +119,8 @@ Standard vim bindings: `hjkl`, `w/b/e`, `0/$`, `x`, `dd`, `dw`, `cw`, `ciw`, `u`
 
 Ghostty only draws the window; tmux does panes and tabs. Config: `config/ghostty/config.ghostty`
 (machine-only lines in `~/.config/ghostty/config.local`). Left Option is Alt/Meta; right Option types
-special characters. `Ctrl+Space` and `Alt+Enter` go through to programs.
+special characters. `Alt+Enter` goes through to programs; `Ctrl+Space` is the Ghostty leader
+(press it twice to send `Ctrl+Space` to the program, e.g. nvim completion).
 
 | Binding               | Action                  |
 |-----------------------|-------------------------|
@@ -130,6 +131,26 @@ special characters. `Ctrl+Space` and `Alt+Enter` go through to programs.
 | `Cmd+ =/-/0`          | Font size +/-/reset     |
 | `Cmd+Enter`           | Toggle fullscreen       |
 | `Cmd+Shift+,`         | Reload config           |
+
+Ghostty splits and tabs, leader `Ctrl+Space` (same letters as tmux; the leader waits with no timeout):
+
+| Binding               | Action                  |
+|-----------------------|-------------------------|
+| `Leader h/j/k/l`      | Go to split left/down/up/right |
+| `Leader Ctrl+h/j/k/l` | Resize split            |
+| `Leader s` / `"`      | Split down              |
+| `Leader v` / `%`      | Split right             |
+| `Leader z`            | Zoom split              |
+| `Leader =`            | Equalize splits         |
+| `Leader x`            | Close split             |
+| `Leader c`            | New tab                 |
+| `Leader Tab`          | Last tab                |
+| `Leader n` / `p`      | Next / previous tab     |
+| `Leader 1-9`          | Go to tab 1-9           |
+| `Leader Ctrl+Space`   | Send `Ctrl+Space`       |
+
+No Ghostty equivalent for the old WezTerm swap (`Leader Shift+hjkl`), rotate (`Leader R`) and pane
+picker (`Leader ;`).
 
 Copy mode and quick select: use tmux (`Prefix [`, `Prefix F` thumbs, `Prefix TAB` extrakto).
 
